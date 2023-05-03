@@ -14,6 +14,7 @@ jobs:
       - name: run doxygen
         shell: bash
         run: |
+          sudo apt install doxygen
           rm -rf html
           doxygen
       - uses: actions/upload-artifact@v3
