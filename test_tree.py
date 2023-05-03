@@ -35,6 +35,7 @@ class TreeTestCase(unittest.TestCase):
         tree.add(0)
         tree.add(8)
         tree.add(2)
+        tree.add(2)
         tree.printTree()
         self.assertEqual(tree.find(4), None)
 
