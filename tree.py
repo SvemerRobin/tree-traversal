@@ -63,15 +63,21 @@ class Tree:
 
     def deleteTree(self):
         # TODO 1
+        """ Method for deleting a tree """
         self.root = None
 
     def printTree(self):
         # TODO 1
+        """ Method for printing a tree """
         if self.root is not None:
             self._printInorderTree(self.root)
 
     def _printInorderTree(self, node):
         # TODO 1
+        """ Method for printing a tree inorder 
+        Args:
+        node: node to start from
+        """
         if node is not None:
             self._printInorderTree(node.left)
             print(str(node.data) + ' ')
@@ -79,10 +85,25 @@ class Tree:
 
     def _printPreorderTree(self, node):
         # TODO 2
-        pass
+        """ Method for printing a tree preorder 
+        Args:
+        node: node to start from
+        """
+        if node is not None:
+            print(str(node.data) + ' ')
+            self._printPreorderTree(node.left)
+            self._printPreorderTree(node.right)
+        
 
     def _printPostorderTree(self, node):
         # TODO 2
-        pass
+        """ Method for printing a tree postorder 
+        Args:
+        node: node to start from
+        """
+        if node is not None:
+            self._printPostorderTree(node.left)
+            self._printPostorderTree(node.right)
+            print(str(node.data) + ' ')
 
 
