@@ -1,0 +1,22 @@
+name: 🚀 Run doxygen
+
+on:
+  create:
+    tags:
+      - v*
+
+jobs:
+  run:
+    name: 🚀 Run doxygen
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: run doxygen
+        shell: bash
+        run: |
+          rm -rf html
+          doxygen
+      - uses: actions/upload-artifact@v3
+        with:
+          name: documentation
+          path: html/
