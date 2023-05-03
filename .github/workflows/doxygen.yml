@@ -16,6 +16,7 @@ jobs:
         run: |
           sudo apt install doxygen
           rm -rf html
+          doxygen -g
           doxygen
       - uses: actions/upload-artifact@v3
         with:
